@@ -2,7 +2,7 @@
 
 Tema:
  - Grafos2
-**Número da Lista**:21
+**Número da Lista**:22
 
 **Conteúdo da Disciplina**: Grafos 2 - Algoritmo de Dijikstra
 
@@ -10,7 +10,7 @@ Tema:
 |Matrícula | Aluno |
 | -- | -- |
 | 20/0038028  |  Guilherme Evangelista Ferreira dos Santos |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 16/0147816  |  Vinícius Edwardo Pereira Oliveira |
 
 ## Sobre 
 Foi criado um labirinto usando uma matriz 30x30 com pesos e obstáculos , onde usei o algoritmo de dijikstra para encontrar o melhor caminho possível. 

@@ -37,47 +37,36 @@ def generate_random_grid(rows, cols):
         grid.append(row)
     return grid
 
-def generate_predefined_grid():
+def generate_predefined_grid(): #Deve ser alterado ainda não está funcionando direito
     # Criar um mapa inicial com todas as células como obstáculos
     grid = [[-1] * COLS for _ in range(ROWS)]
 
-    # Criar o ponto de entrada único (início compartilhado na coluna 0)
-    grid[20][0] = 1
-    grid[19][0] = 1
-    grid[18][0] = 1
-    grid[17][0] = 1
-    grid[16][0] = 1
-    grid[15][0] = 1 
-    grid[14][0] = 1
-    grid[13][0] = 1
-    grid[12][0] = 1
-    grid[11][0] = 1
-    grid[10][0] = 1
+    # Criar o ponto de entrada único (início compartilhado)
+    # for col in range(0, 5):  # Colunas iniciais de 0 a 4
+    #     grid[15][col] = 1 
 
-    # Criar a divisão das três pistas nas colunas de 1 a 4
-    for col in range(1, 5):
-        grid[10][col] = random.randint(2, 5)  # Linha superior (pista 1)
-        grid[15][col] = random.randint(1, 3)  # Linha do meio (pista 2)
-        grid[20][col] = random.randint(4, 7)  # Linha inferior (pista 3)
+    # Convergir todas as pistas para o mesmo destino final
+    for row in [8, 13, 18]:  # Linhas 10, 15 e 20 convergem para a coluna 25
+        grid[row][5] = random.randint(1,3)
 
-    # Criar as três pistas paralelas nas colunas de 5 a 23
-    for col in range(5, 24):
-        grid[10][col] = random.randint(2, 5)  # Linha superior (pista 1)
-        grid[15][col] = random.randint(1, 3)  # Linha do meio (pista 2)
-        grid[20][col] = random.randint(4, 7)  # Linha inferior (pista 3)
+        for i in range(0,5):
+            grid[row-i][5] = random.randint(1,3)
 
-    # Convergir todas as pistas para a coluna 25
-    for row in range(10, 21):  # Linhas entre 10 e 20 convergem gradualmente
-        grid[row][24] = random.randint(1, 3)  # Ajuste antes da convergência
+    # Dividir o caminho em três pistas
+    for col in range(5, 25):  # Colunas de 5 a 24
 
-    # Ajustar o ponto de convergência final (linha 15, coluna 25)
-    for col in range(24, 26):
-        grid[15][col] = 1  # Convergência no ponto final (coluna 25, linha central)
+        grid[8][col] = random.randint(4,6)  # Linha superior (pista 1)
+        grid[13][col] = random.randint(7,9)  # Linha do meio (pista 2)
+        grid[18][col] = random.randint(1,3)  # Linha inferior (pista 3)
+
+    # Convergir todas as pistas para o mesmo destino final
+    for row in [8, 13, 18]:  # Linhas 10, 15 e 20 convergem para a coluna 25
+        grid[row][25] = random.randint(1,3)
+
+        for i in range(0,5):
+            grid[row+i][25] = random.randint(1,3)
 
     return grid
-
-
-
 
 
 
