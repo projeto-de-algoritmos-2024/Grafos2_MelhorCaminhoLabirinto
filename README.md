@@ -19,7 +19,9 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
 **Linguagem**: python
+
 **Framework**: pygame(biblioteca)
+
 Requisitos:Ter o py instalado e a biblioteca pygame instalada nos módulos do seu python.
 
 ## Uso 
