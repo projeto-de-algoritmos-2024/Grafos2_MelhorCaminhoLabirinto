@@ -17,6 +17,17 @@ Foi criado um labirinto usando uma matriz 30x30 com pesos e obstáculos , onde u
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
+![](./Imagens/mapaAleatorio.png)
+Mapa aleatório
+
+![](./Imagens/dijikstraprocurando.png)
+Algoritmo de dikistra procurando melhor caminho 
+
+![](./Imagens/caminhoEncontrado.png)
+Caminho encontrado
+
+
+
 ## Instalação 
 **Linguagem**: python
 
