@@ -41,6 +41,9 @@ Após rodar o código o mapa aleatório será gerado , escolha seu caminho inici
 Depois disso aperte a tecla espaço para rodar o algoritmo de dijikstra , após ele achar o caminho aperte a tecla enter para o boneco percorrer o caminho.
 Se desejar um caminho pré definido aperte a tecla p para gera-lo ou aperte a tecla r para gerar um novo mapa aleatório.
 
+## Vídeo
+https://youtu.be/RkIuVJ8B9Kc
+
 
 
 
